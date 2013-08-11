@@ -3,6 +3,23 @@ It makes sure that your processes are dead.
 
 ## Usage
 
+### Example
+
+The following example uses `killer` to kill a child process after an hour.
+
+```js
+var spawn = require('child_process').spawn,
+    killer = require('killer');
+
+var child = spawn('node', ['server.js']);
+setTimeout(function () {
+  // Ensure that the server is dead.
+  killer(child.pid, function () {
+    console.log('Child process killed');
+  });
+}, 60 * 60 * 1000);
+```
+
 ### `killer(options, callback)`
 
 #### `options`
