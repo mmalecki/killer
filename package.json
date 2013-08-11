@@ -1,7 +1,7 @@
 {
   "name": "killer",
   "author": "Maciej Małecki <me@mmalecki.com>",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "devDependencies": {
     "assert-called": "0.1.x"
   },
